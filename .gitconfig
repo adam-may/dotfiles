@@ -1,5 +1,16 @@
 [user]
-	name = Adam May
-	email = adammay@gmail.com
+    name = Adam May
+    email = adammay@gmail.com
+[diff]
+    tool = vimdiff
+[merge]
+    tool = vimdiff
+[difftool]
+    prompt = false
 [alias]
-	st = status
+    st = status
+    l = log --pretty=format:\"[%h] %ae, %ar: %s\" --stat
+    new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+    edit-unmerged = "!f() { git diff --name-status --diff-filter=U | cut -f2 ; }; vim `f`"
+    add-unmerged = "!f() { git diff --name-status --diff-filter=U | cut -f2 ; }; git add `f`"
+

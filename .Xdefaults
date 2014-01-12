@@ -15,7 +15,7 @@ URxvt*borderLess:                 false
 URxvt*depth:                      32
 URxvt*scrollBar_right:            true
 !URxvt*font:                       xft:terminus-9
-URxvt*font:                       xft:Inconsolata\-dz for Powerline:style=dzForPowerline:pixelsize=16
+URxvt*font:                       xft:Inconsolata\-dz for Powerline:style=dzForPowerline:pixelsize=14
 URxvt*cursorBlink:                true
 URxvt*cursorUnderline:            true
 URxvt*scrollColor:                #111111
