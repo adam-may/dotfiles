@@ -1,0 +1,80 @@
+! Xft settings ---------------------------------------------------------------
+
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+!-------------------------------------------------------------------------------
+!
+! U R X V T - Settings
+!
+URxvt*geometry:                   100x35
+URxvt*borderLess:                 false
+URxvt*depth:                      32
+URxvt*scrollBar_right:            true
+!URxvt*font:                       xft:terminus-9
+URxvt*font:                       xft:Inconsolata\-dz for Powerline:style=dzForPowerline:pixelsize=16
+URxvt*cursorBlink:                true
+URxvt*cursorUnderline:            true
+URxvt*scrollColor:                #111111
+URxvt*perl-ext-common:            default,clipboard,tabbed,matcher
+URxvt.scrollBar:                  on
+URxvt.scrollstyle:                plain
+!URxvt.iconFile:                  ~/icons/Terminal.svg
+URxvt.tabbed.new-button:          true
+URxvt.tabbed.autohide:            true
+URxvt.tabbed.reopen-on-close:     yes
+URxvt.tabbed.tabbar-fg:           7
+URxvt.tabbed.tabbar-bg:           0
+URxvt.tabbed.tab-fg:              4
+URxvt.tabbed.tab-bg:              0
+URxvt*termName:                   rxvt-256color
+URxvt.urlLauncher:                /usr/bin/firefox
+URxvt.matcher.button:             1
+URxvt.perl-ext-common:            default,clipboard,url-select,keyboard-select,tabbedex,font-size,vtwheel
+URxvt.url-select.launcher:        /usr/bin/firefox -new-tabbedex
+URxvt.url-select.underline:       true
+URxvt.keysym.M-u:                 perl:url-select:select_next
+URxvt.keysym.M-Escape:            perl:keyboard-select:activate
+URxvt.keysym.M-s:                 perl:keyboard-select:search
+URxvt.keysym.C-Up:                perl:font-size:increase
+URxvt.keysym.C-Down:              perl:font-size:decrease
+URxvt.keysym.C-S-Up:              perl:font-size:incglobal
+URxvt.keysym.C-S-Down:            perl:font-size:decglobal
+
+!---------------------------------------------------------------------------------
+!
+! U R X V T - Colors
+!
+!---------------------------------------------------------------------------------
+
+
+!black
+URxvt.color0:  #000000
+URxvt.color8:  #2B2B2B
+!red
+URxvt.color1:  #A5372E
+URxvt.color9:  #E06C5C
+!green
+URxvt.color2:  #4A663C
+URxvt.color10: #7B996C
+!yellow
+URxvt.color3:  #7C5618
+URxvt.color11: #B38849
+!blue
+URxvt.color4:  #566060
+URxvt.color12: #889393
+!magenta
+URxvt.color5:  #8E4948
+URxvt.color13: #C67C78
+!cyan
+URxvt.color6:  #6D5B42
+URxvt.color14: #A28D73
+!white
+URxvt.color7:  #8D8D8D
+URxvt.color15: #C6C6C6
+
+urxvt.background: #1c1c1c
+urxvt.foreground: 15
