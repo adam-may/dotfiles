@@ -2,11 +2,11 @@
     name = Adam May
     email = adammay@gmail.com
 [diff]
-    tool = vimdiff
+	tool = vimdiff
 [merge]
-    tool = vimdiff
+	tool = vimdiff
 [difftool]
-    prompt = false
+	prompt = false
 [alias]
     st = status
     l = log --pretty=format:\"[%h] %ae, %ar: %s\" --stat
