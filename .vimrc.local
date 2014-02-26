@@ -1,3 +1,4 @@
+colorscheme vividchalk
 set softtabstop=2
 
 set guifont=DejaVu\ Sans\ Mono\ 10
@@ -12,6 +13,3 @@ set hidden
 set t_Co=256
 
 let &colorcolumn=join(range(81,999),",")
-
-Bundle 'Valloric/YouCompleteMe'
-
