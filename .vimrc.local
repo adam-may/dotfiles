@@ -1,0 +1,17 @@
+set softtabstop=2
+
+set guifont=DejaVu\ Sans\ Mono\ 10
+
+" Functionality to bind F3 to show a list of matching results
+command! -nargs=? Filter let @a='' | execute 'g/<args>/y A' | new | setlocal bt=nofile | put! a
+nnoremap <silent> <F3> :redir @a<CR>:g//<CR>:redir END<CR>:new<CR>:put! a<CR>
+
+" Automatically hide buffers
+set hidden
+
+set t_Co=256
+
+let &colorcolumn=join(range(81,999),",")
+
+Bundle 'Valloric/YouCompleteMe'
+
