@@ -1,7 +1,7 @@
 colorscheme topfunky-light
 set softtabstop=2
 
-set guifont=DejaVu\ Sans\ Mono\ 10
+set guifont=Inconsolata\ Bold\ 13
 
 " Functionality to bind F3 to show a list of matching results
 command! -nargs=? Filter let @a='' | execute 'g/<args>/y A' | new | setlocal bt=nofile | put! a
