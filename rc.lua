@@ -40,8 +40,8 @@ end
 -- }}}
 
 -- {{{ Variable definitions
--- Themes define colours, icons, and wallpapers
-beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+-- Themes define colours, icons, font and wallpapers.
+beautiful.init("/usr/share/awesome/themes/current/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
@@ -153,7 +153,9 @@ mytasklist.buttons = awful.util.table.join(
                                                   instance:hide()
                                                   instance = nil
                                               else
-                                                  instance = awful.menu.clients({ width=250 })
+                                                  instance = awful.menu.clients({
+                                                      theme = { width = 250 }
+                                                  })
                                               end
                                           end),
                      awful.button({ }, 4, function ()
@@ -302,6 +304,7 @@ clientkeys = awful.util.table.join(
 -- This should map on the top row of your keyboard, usually 1 to 9.
 for i = 1, 9 do
     globalkeys = awful.util.table.join(globalkeys,
+        -- View tag only.
         awful.key({ modkey }, "#" .. i + 9,
                   function ()
                         local screen = mouse.screen
@@ -310,6 +313,7 @@ for i = 1, 9 do
                            awful.tag.viewonly(tag)
                         end
                   end),
+        -- Toggle tag.
         awful.key({ modkey, "Control" }, "#" .. i + 9,
                   function ()
                       local screen = mouse.screen
@@ -318,6 +322,7 @@ for i = 1, 9 do
                          awful.tag.viewtoggle(tag)
                       end
                   end),
+        -- Move client to tag.
         awful.key({ modkey, "Shift" }, "#" .. i + 9,
                   function ()
                       if client.focus then
@@ -327,6 +332,7 @@ for i = 1, 9 do
                           end
                      end
                   end),
+        -- Toggle tag.
         awful.key({ modkey, "Control", "Shift" }, "#" .. i + 9,
                   function ()
                       if client.focus then
@@ -348,15 +354,15 @@ root.keys(globalkeys)
 -- }}}
 
 -- {{{ Rules
+-- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
     -- All clients will match this rule.
     { rule = { },
       properties = { border_width = beautiful.border_width,
                      border_color = beautiful.border_normal,
                      focus = awful.client.focus.filter,
+                     raise = true,
                      keys = clientkeys,
-                     maximized_vertical = false,
-                     maximized_horizontal = false,
                      buttons = clientbuttons } },
     { rule = { class = "MPlayer" },
       properties = { floating = true } },
