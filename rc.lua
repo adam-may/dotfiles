@@ -11,6 +11,8 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 
+local vicious = require("vicious")
+
 -- Set font
 awesome.font = "inconsolata 14"
 
@@ -117,6 +119,28 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- Create a textclock widget
 mytextclock = awful.widget.textclock()
 
+batwidget = awful.widget.progressbar()
+batwidget:set_width(8)
+batwidget:set_height(10)
+batwidget:set_vertical(true)
+batwidget:set_background_color("#494B4F")
+batwidget:set_border_color(nil)
+batwidget:set_color({ type = "linear", from = { 0, 0 }, to = { 0, 10 }, stops = { { 0, "#AECF96" }, { 0.5, "#88A175" }, { 1, "#FF5656" }}})
+vicious.register(batwidget, vicious.widgets.bat, "$2", 61, "BAT0")
+
+volwidget = wibox.widget.textbox()
+vicious.register(volwidget, vicious.widgets.volume, " $1% ", 2, "Master")
+
+volwidget:buttons(awful.util.table.join(
+    awful.button({ }, 1, function () awful.util.spawn("urxvt -e alsamixer") end),
+    awful.button({ }, 2, function () awful.util.spawn("amixer -q sset Master toggle")   end),
+    awful.button({ }, 4, function () awful.util.spawn("amixer -q sset PCM 2dB+", false) end),
+    awful.button({ }, 5, function () awful.util.spawn("amixer -q sset PCM 2dB-", false) end)
+))
+
+netwidget = wibox.widget.textbox()
+vicious.register(netwidget, vicious.widgets.net, '<span color="#CC9393">${wlp3s0 down_kb}</span> <span color="#7F9F7F">${wlp3s0 up_kb}</span>', 3)
+
 -- Create a wibox for each screen and add it
 mywibox = {}
 mypromptbox = {}
@@ -196,6 +220,9 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(netwidget)
+    right_layout:add(volwidget)
+    right_layout:add(batwidget)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 
