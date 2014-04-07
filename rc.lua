@@ -141,6 +141,12 @@ volwidget:buttons(awful.util.table.join(
 netwidget = wibox.widget.textbox()
 vicious.register(netwidget, vicious.widgets.net, '<span color="#CC9393">${wlp3s0 down_kb}</span> <span color="#7F9F7F">${wlp3s0 up_kb}</span>', 3)
 
+wifiicon = wibox.widget.imagebox()
+wifiicon:set_image(beautiful.widget_wifi)
+
+wifiwidget = wibox.widget.textbox()
+vicious.register(wifiwidget, vicious.widgets.wifi, "${ssid}:", 3, "wlp3s0")
+
 -- Create a wibox for each screen and add it
 mywibox = {}
 mypromptbox = {}
@@ -220,6 +226,7 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(wifiwidget)
     right_layout:add(netwidget)
     right_layout:add(volwidget)
     right_layout:add(batwidget)
