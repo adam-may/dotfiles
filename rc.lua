@@ -139,7 +139,7 @@ volwidget:buttons(awful.util.table.join(
 ))
 
 netwidget = wibox.widget.textbox()
-vicious.register(netwidget, vicious.widgets.net, '<span color="#CC9393">${enp0s25 down_kb}</span> <span color="#7F9F7F">${enp0s25 up_kb}</span>', 3)
+vicious.register(netwidget, vicious.widgets.net, '<span color="#CC9393">${eth0 down_kb}</span> <span color="#7F9F7F">${eth0 up_kb}</span>', 3)
 
 -- Create a wibox for each screen and add it
 mywibox = {}
