@@ -8,7 +8,8 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-PATH="${PATH}:/home/adam/.gem/ruby/2.0.0/bin"
+export EDITOR="vim"
+export BROWSER="firefox"
 
 source /usr/share/git/completion/git-completion.bash
 source /usr/share/git/completion/git-prompt.sh
