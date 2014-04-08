@@ -1,2 +1,3 @@
 Bundle 'dotnetguyuk/vim-topfunkylight'
 Bundle 'gregsexton/gitv.git'
+Bundle 'nosami/Omnisharp.git'
