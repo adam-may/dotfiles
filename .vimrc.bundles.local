@@ -1,4 +1,5 @@
 Bundle 'dotnetguyuk/vim-topfunkylight'
 Bundle 'gregsexton/gitv.git'
-Bundle 'nosami/Omnisharp.git'
 Bundle 'tpope/vim-dispatch.git'
+Bundle 'jnwhiteh/vim-golang.git'
+Bundle 'Lokaltog/powerline.git'
