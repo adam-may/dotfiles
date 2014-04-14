@@ -15,3 +15,8 @@ source /usr/share/git/completion/git-completion.bash
 source /usr/share/git/completion/git-prompt.sh
 source ~/dotfiles/.bash_aliases
 
+export WORKON_HOME=~/.virtualenvs
+export PROJECT_HOME=~/code
+
+source /usr/bin/virtualenvwrapper.sh
+

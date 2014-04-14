@@ -14,9 +14,7 @@ URxvt*geometry:                   100x35
 URxvt*borderLess:                 false
 URxvt*depth:                      32
 URxvt*scrollBar_right:            true
-!URxvt*font:                       xft:terminus-9
-!URxvt*font:                       xft:Inconsolata\-dz for Powerline:style=dzForPowerline:pixelsize=14
-URxvt*font:                       xft:Inconsolata for Powerline:pixelsize=18:antialias=true
+URxvt.font:                       xft:Inconsolata for Powerline:pixelsize=18:antialias=true:hinting=true
 URxvt*cursorBlink:                true
 URxvt*cursorUnderline:            true
 URxvt*scrollColor:                #555555
@@ -44,6 +42,8 @@ URxvt.keysym.C-Up:                perl:font-size:increase
 URxvt.keysym.C-Down:              perl:font-size:decrease
 URxvt.keysym.C-S-Up:              perl:font-size:incglobal
 URxvt.keysym.C-S-Down:            perl:font-size:decglobal
+URxvt.keysym.Control-c            perl:clipboard:copy
+URxvt.keysym.Control-v            perl:clipboard:paste
 
 !---------------------------------------------------------------------------------
 !
