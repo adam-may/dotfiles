@@ -107,3 +107,8 @@ else \
 fi)'
 
 alias ls='ls --color=always'
+
+ff() {
+  find . -type f -exec grep -Hn $1 {} \;
+}
+
