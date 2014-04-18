@@ -106,3 +106,4 @@ else \
   echo " '$Yellow$PathShort$Color_Off'\$ "; \
 fi)'
 
+alias ls='ls --color=always'
