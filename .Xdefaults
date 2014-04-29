@@ -10,6 +10,7 @@ Xft.hintstyle:  hintslight
 !
 ! U R X V T - Settings
 !
+URxvt.urgentOnBell		  true
 URxvt*geometry:                   100x35
 URxvt*borderLess:                 false
 URxvt*depth:                      32
