@@ -112,4 +112,4 @@ ff() {
   find . -type f -exec grep -Hn $1 {} \;
 }
 
-alias vim='gvim'
+# alias vim='gvim'

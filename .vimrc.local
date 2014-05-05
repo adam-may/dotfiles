@@ -1,4 +1,5 @@
-colorscheme topfunky-light
+" colorscheme topfunky-light
+colorscheme vibrantink
 set softtabstop=2
 
 set guifont=Monaco\ Bold\ 10
@@ -25,6 +26,8 @@ if &term =~ "xterm\\|rxvt"
   " use \003]12;gray\007 for gnome-terminal
 endif
 
+au FileType go au BufWritePre <buffer> Fmt
+
 let g:neocomplete#enable_at_startup=1
 
 filetype plugin indent on
@@ -43,4 +46,4 @@ if has("autocmd") && exists("+omnifunc")
 endif
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
-"let g:rubycomplete_rails = 1
+let g:rubycomplete_rails = 1
