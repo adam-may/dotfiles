@@ -13,8 +13,8 @@ set hidden
 
 set t_Co=256
 
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
 let &colorcolumn="81"
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
 if &term =~ "xterm\\|rxvt"
   " use an orange cursor in insert mode
