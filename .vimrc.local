@@ -1,5 +1,5 @@
 " colorscheme topfunky-light
-colorscheme vibrantink
+colorscheme molokai
 set softtabstop=2
 
 set guifont=Monaco\ Bold\ 10
@@ -13,7 +13,8 @@ set hidden
 
 set t_Co=256
 
-let &colorcolumn=join(range(81,999),",")
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+let &colorcolumn="81"
 
 if &term =~ "xterm\\|rxvt"
   " use an orange cursor in insert mode

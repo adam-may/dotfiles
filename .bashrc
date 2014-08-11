@@ -20,3 +20,4 @@ export PROJECT_HOME=~/code
 
 source /usr/bin/virtualenvwrapper.sh
 
+source ~/.autoenv/activate.sh
