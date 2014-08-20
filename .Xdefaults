@@ -15,7 +15,9 @@ URxvt*geometry:                   100x35
 URxvt*borderLess:                 false
 URxvt*depth:                      32
 URxvt*scrollBar_right:            true
-URxvt.font:                       xft:Inconsolata for Powerline:pixelsize=18:antialias=true:hinting=true
+#URxvt.font:                       xft:Inconsolata-dz for Powerline:size=12:antialias=true:hinting=true
+URxvt.font:                       xft:Ubuntu Mono derivative Powerline:size=12:antialias=true:hinting=true
+URxvt*cursorBlink:                true
 URxvt*cursorBlink:                true
 URxvt*cursorUnderline:            true
 URxvt*scrollColor:                #555555

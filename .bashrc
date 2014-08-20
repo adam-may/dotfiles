@@ -5,8 +5,14 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+function _update_ps1() {
+  export PS1="$(~/dotfiles/powerline-shell.py $? 2> /dev/null)"
+}
+
+export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+
 alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
+#PS1='[\u@\h \W]\$ '
 
 export EDITOR="vim"
 export BROWSER="firefox"
