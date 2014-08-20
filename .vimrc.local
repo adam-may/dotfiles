@@ -2,7 +2,7 @@
 colorscheme molokai
 set softtabstop=2
 
-set guifont=Monaco\ Bold\ 10
+set guifont=Monaco\ for\ Powerline\ 10
 
 " Functionality to bind F3 to show a list of matching results
 command! -nargs=? Filter let @a='' | execute 'g/<args>/y A' | new | setlocal bt=nofile | put! a
