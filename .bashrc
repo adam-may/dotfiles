@@ -12,6 +12,8 @@ function _update_ps1() {
 export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 
 alias ls='ls --color=auto'
+alias ll='ls -al'
+
 #PS1='[\u@\h \W]\$ '
 
 export EDITOR="vim"
@@ -34,7 +36,9 @@ source ~/dotfiles/.bash_aliases
 export WORKON_HOME=~/.virtualenvs
 export PROJECT_HOME=~/code
 
-source ~/.autoenv/activate.sh
+if [ -f ~/.autoenv/activate.sh ]; then
+    source ~/.autoenv/activate.sh
+fi
 
 if [ -f /usr/bin/virtualenvwrapper.sh ]; then
 	source /usr/bin/virtualenvwrapper.sh
