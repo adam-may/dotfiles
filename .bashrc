@@ -38,6 +38,8 @@ export PROJECT_HOME=~/code
 
 if [ -f ~/.autoenv/activate.sh ]; then
     source ~/.autoenv/activate.sh
+elif [ -f /usr/bin/activate.sh ]; then
+    source /usr/bin/activate.sh
 fi
 
 if [ -f /usr/bin/virtualenvwrapper.sh ]; then
