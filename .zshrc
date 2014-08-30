@@ -87,16 +87,18 @@ export WORKON_HOME=~/.virtualenvs
 export PROJECT_HOME=~/code
 
 if [ -f ~/.autoenv/activate.sh ]; then
-source ~/.autoenv/activate.sh
+    source ~/.autoenv/activate.sh
 elif [ -f /usr/bin/activate.sh ]; then
-source /usr/bin/activate.sh
+    source /usr/bin/activate.sh
 fi
 
 if [ -f /usr/bin/virtualenvwrapper.sh ]; then
-source /usr/bin/virtualenvwrapper.sh
+    source /usr/bin/virtualenvwrapper.sh
 fi
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 bindkey -v
 
