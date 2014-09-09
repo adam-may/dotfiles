@@ -43,7 +43,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/usr/share/awesome/themes/current/theme.lua")
+beautiful.init("/home/adam/dotfiles/awesome/theme/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
@@ -76,7 +76,7 @@ local layouts =
 -- }}}
 
 -- {{{ Wallpaper
-theme.wallpaper = "/usr/share/archlinux/wallpaper/archlinux-simplyblack.png"
+theme.wallpaper = "/home/adam/dotfiles/awesome/theme/archlinux-simplyblack.png"
 
 if beautiful.wallpaper then
     for s = 1, screen.count() do
