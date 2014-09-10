@@ -1,0 +1,59 @@
+Section "ServerLayout"
+    Identifier "Layout0"
+    Screen     "Screen0"
+    InputDevice  "Keyboard1" "CoreKeyboard"
+    InputDevice  "Mouse1" "CorePointer"
+    Option "AutoAddDevices" "false"
+EndSection
+
+Section "Files"
+    ModulePath "/usr/lib/nvidia-current/xorg,/usr/lib/xorg/modules"
+EndSection
+
+Section "Extensions"
+    Option         "Composite" "Enable"
+EndSection
+
+Section "Device"
+    Identifier "Device0"
+    Driver "nvidia"
+    VendorName "NVIDIA Corporation"
+    BusID "01:00:0"
+    Option "NoLogo" "true"
+    Option "ConnectedMonitor" "DFP-0"
+    Option "RenderAccel" "true"
+    Option "AllowGLXWithComposite" "true"
+EndSection
+
+Section "Module"
+    Load           "glx"
+EndSection
+
+Section "Monitor"
+    Identifier    "Monitor0"
+EndSection
+
+Section "InputDevice"
+    Identifier      "Keyboard1"
+    Driver          "void"
+    Option          "CoreKeyboard"
+EndSection
+
+Section "InputDevice"
+    Identifier      "Mouse1"
+    Driver          "void"
+    Option          "CorePointer"
+EndSection
+
+Section "Screen"
+    Identifier "Screen0"
+    Monitor "Monitor0"
+    Device "Device0"
+    Defaultdepth 24
+# depending on your monitor, I didnt need the following section
+#    SubSection "Display"
+# 	Depth 24
+#	Modes "1920x1080"
+#	Modes "1600x1200"
+#    EndSubSection
+EndSection
