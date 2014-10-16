@@ -10,7 +10,7 @@
 */
 
 div#notebook, div.CodeMirror, div.output_area pre, div.output_wrapper, div.prompt {
-  font-family: 'Monaco', monospace !important;
+  font-family: "DejaVu Sans Mono",Helvetica,monospace !important;
 }
 
 /* GLOBALS */
