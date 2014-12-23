@@ -54,7 +54,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/adam/go/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/bin/vendor_perl:/usr/bin/core_perl"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -103,3 +103,10 @@ fi
 
 bindkey "^R" history-incremental-search-backward
 bindkey "^S" history-incremental-search-forward
+
+tmux attach &> /dev/null
+
+if [[ ! $TERM =~ screen ]]; then
+    export TERM=xterm-256color
+    exec tmux
+fi
