@@ -54,7 +54,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/bin/vendor_perl:/usr/bin/core_perl"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/local/go/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -110,3 +110,5 @@ if [[ ! $TERM =~ screen ]]; then
     export TERM=xterm-256color
     exec tmux
 fi
+
+[ -s "/home/adam/.dnx/dnvm/dnvm.sh" ] && . "/home/adam/.dnx/dnvm/dnvm.sh" # Load dnvm
