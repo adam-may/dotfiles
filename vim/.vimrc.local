@@ -1,5 +1,6 @@
 " colorscheme topfunky-light
-colorscheme molokai
+" colorscheme molokai
+colorscheme delphi
 set softtabstop=2
 
 " set guifont=Monaco\ for\ Powerline\ 10
