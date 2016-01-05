@@ -101,6 +101,10 @@ if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.z
     source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
+if [ -f ~/.gvm/scripts/gvm ]; then
+    source ~/.gvm/scripts/gvm
+fi
+
 bindkey "^R" history-incremental-search-backward
 bindkey "^S" history-incremental-search-forward
 
