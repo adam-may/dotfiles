@@ -1,10 +1,10 @@
 " colorscheme topfunky-light
 " colorscheme molokai
-colorscheme delphi
+colorscheme ir_black
 set softtabstop=2
 
 " set guifont=Monaco\ for\ Powerline\ 10
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
+set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline\ 10
 
 " Functionality to bind F3 to show a list of matching results
 command! -nargs=? Filter let @a='' | execute 'g/<args>/y A' | new | setlocal bt=nofile | put! a
@@ -50,3 +50,4 @@ endif
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
+let g:rustfmt_autosave = 1
