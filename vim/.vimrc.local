@@ -1,6 +1,7 @@
 " colorscheme topfunky-light
 " colorscheme molokai
-colorscheme ir_black
+" colorscheme ir_black
+colorscheme vibrantink
 set softtabstop=2
 
 " set guifont=Monaco\ for\ Powerline\ 10
