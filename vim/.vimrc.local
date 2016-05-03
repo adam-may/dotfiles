@@ -10,6 +10,9 @@ set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline\ 10
 command! -nargs=? Filter let @a='' | execute 'g/<args>/y A' | new | setlocal bt=nofile | put! a
 nnoremap <silent> <F3> :redir @a<CR>:g//<CR>:redir END<CR>:new<CR>:put! a<CR>
 
+" Turn off spelling
+set nospell
+
 " Automatically hide buffers
 set hidden
 
@@ -51,3 +54,9 @@ let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
 let g:rustfmt_autosave = 1
+
+let g:tex_fold_enabled=1
+let g:vimsyn_folding='af'
+let g:xml_syntax_folding = 1
+let g:php_folding = 1
+let g:perl_fold = 1
